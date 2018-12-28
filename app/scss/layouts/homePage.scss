@@ -1,0 +1,767 @@
+$rozeQuartz: #F7CAC9;
+$graniteGray: #696667;
+$lightBeige: #F0EEE9;
+$darkGray: #424443;
+
+
+/* MAIN SLIDER BLOCK */
+
+.slide-box{
+  width: 100%;
+  overflow: hidden;
+}
+
+.slide-item{
+  height: 750px;
+  display: flex !important;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+    img{
+      position: absolute;
+      width: 100%;
+      top: -50%;
+    }
+    &:nth-child(3){
+      background: url('../../images/giant2.jpeg') 100% 50% no-repeat;
+      //background-size: cover;
+    }
+    &:nth-child(2){
+      background: url('../../images/beautiful-bloom-blooming-916340.jpg') 50% 50% no-repeat;
+      background-size: cover;
+    }
+    &:nth-child(1){
+      background: url('../../images/newyear.jpg') 50% 50% no-repeat;
+      background-size: cover;
+    }
+    &:nth-child(4){
+      background: url('../../images/beautiful-blooming-bouquet-759668.jpg') 50% 50% no-repeat;
+      background-size: cover;
+    }
+
+    .shadow{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.2);
+    }
+  background-size: cover;
+}
+
+
+.slick-next{
+  right: 25px;
+  z-index: 20;
+}
+
+.slick-prev{
+  left: 25px;
+  z-index: 20;
+}
+
+.slick-dots{
+  bottom: 20px;
+  li{
+    margin: 0px 12px;
+    &.slick-active{
+      button{
+        &:before{
+          color: $rozeQuartz;
+          opacity: 1;
+        }
+      }
+    }
+    button{
+      &:before{
+        color: $rozeQuartz;
+        font-size: 15px;
+        opacity: .75;
+      }
+    }
+  }
+}
+
+
+.slide-text, .slide-btn{
+  z-index: 20;
+  color: #fff;
+  font-size: 55px;
+  margin-left: 150px;
+}
+
+.slide-btn{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  background: transparent;
+  border: 3px solid $rozeQuartz;
+  padding: 15px 25px;
+  color: white;
+  margin-top: 40px;
+  transition: .2s linear;
+
+  &:hover{
+    background: $rozeQuartz;
+    transition: .2s linear;
+    cursor: pointer;
+  }
+}
+
+.header-slider-wrapper{
+  .slick-arrow{
+    display: flex;
+    top: 50%;
+    background: rgba(255,255,255,0.5) !important;
+    border-radius: 50px;
+    transition: .2s linear;
+    &:before{
+      background: transparent;
+      color: $graniteGray;
+      opacity: 0.5;
+    }
+    &:hover{
+      background: rgba(255,255,255,0.8) !important;
+      transition: .2s linear;
+    }
+  }
+  .slick-prev{
+    left: 30px;
+  }
+  .slick-next{
+    right: 30px;
+  }
+}
+
+/* SALE ROW */
+.sale-row{
+  height: 100px;
+  background: $lightBeige;
+  display: flex;
+  justify-content: center;
+
+  button{
+    width: 200px;
+    height: 50px;
+    background: $rozeQuartz;
+    border: 2px solid $rozeQuartz;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 40px;
+
+    &:hover{
+      cursor: pointer;
+    }
+  }
+
+  p{
+    color: $darkGray;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    letter-spacing: 1.2px;
+    margin: 0px;
+  }
+
+  .sale-row-wrap{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
+
+
+
+/* BANNER 3 POPULAR PRODUCTS */
+
+.banners{
+  display: flex;
+  justify-content: center;
+  margin-top: 120px;
+  margin-bottom: 100px;
+}
+
+.banner-wrap{
+  display: flex;
+  width: 75%;
+  justify-content: space-around;
+}
+
+.banner{
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &:hover{
+    cursor: pointer;
+
+    .border-square1{
+      opacity: 1;
+      transition: .2s linear;
+      top: -20px;
+      right: -20px;
+    }
+
+    .border-square2{
+      opacity: 1;
+      transition: .2s linear;
+      bottom: -20px;
+      left: -20px;
+    }
+
+  }
+}
+
+.banner-img-wrap{
+  position: relative;
+  border: 2px solid $rozeQuartz;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img{
+    width: 300px;
+    height: 300px;
+  }
+}
+
+.border-square1{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 2px solid $rozeQuartz;
+  top: -30px;
+  right: -30px;
+  z-index: 200;
+  display: flex;
+  border-bottom: none;
+  border-left: none;
+  opacity: 0;
+  transition: .2s linear;
+}
+
+.border-square2{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 2px solid $rozeQuartz;
+  bottom: -30px;
+  left: -30px;
+  z-index: 200;
+  display: flex;
+  border-top: none;
+  border-right: none;
+  opacity: 0;
+  transition: .2s linear;
+}
+
+.banner-text{
+  color: $darkGray;
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  margin-top: 30px;
+  display: inline-block;
+}
+
+.shop-btn{
+  width: 200px;
+  height: 40px;
+  background: $rozeQuartz;
+  border: 2px solid $rozeQuartz;
+  margin-top: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: .2s linear;
+
+    &:hover{
+      background: transparent;
+      transition: .2s linear;
+      color: $rozeQuartz;
+      cursor: pointer;
+    }
+}
+
+
+
+
+/* INFO-SINGLE BANNER */
+
+.slick-dotted.slick-slider {
+  margin-bottom: 0px;
+}
+
+.info-single-banner{
+  height: 700px;
+  background: $lightBeige;
+  position: relative;
+  background: url(../../images/bg1.jpg) 100% 100%;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+}
+
+.info-single-banner-wrap{
+  width: 80%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  ul{
+    margin-bottom: 5px;
+    li{
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.bg-shadow{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(240, 238, 233, 0.7 );
+}
+
+.info-text-side{
+  width: 45%;
+  font-family: 'Montserrat', sans-serif;
+  color: $graniteGray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+    h2{
+      color: $darkGray;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 500;
+      margin-top: 80px;
+      margin-bottom: 40px;
+    }
+
+    p{
+      text-indent: 40px;
+    }
+}
+
+.info-slide-side{
+  width: 45%;
+  display: flex;
+  align-items: center;
+
+}
+.info-slide-box{
+  width: 550px;
+  height: 500px;
+}
+
+.info-slide-item{
+  height: 100%;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+
+    &:nth-child(1){
+      background: url("../../images/beautiful-bloom-blooming-540522.jpg") 50% 50% no-repeat;
+    }
+    &:nth-child(2){
+      background: url("../../images/slider5.jpg") 50% 50% no-repeat;
+    }
+    &:nth-child(3){
+      background: url("../../images/slider6.jpg") 50% 50% no-repeat;
+    }
+}
+
+
+.slick-list, .slick-track{
+  height: 100%;
+}
+
+.slide-item-border{
+  width: 92%;
+  height: 92%;
+  border: 2px solid $rozeQuartz;
+  display: flex;
+}
+
+.slick-arrow{
+  width: 60px;
+  height: 60px;
+  display: flex;
+  background: $rozeQuartz;
+  align-items: center;
+  justify-content: center;
+}
+
+.slick-arrow:hover, .slick-arrow:focus{
+  background: $rozeQuartz;
+}
+
+.slick-prev:before, .slick-next:before {
+  width: 100%;
+  height: 100%;
+  background: $rozeQuartz;
+  display: block;font-size: 30px;
+  font-weight: 900;
+  font-family: "Open Sans";
+}
+
+.slick-prev:before {
+  content: '<';
+}
+
+.slick-next:before {
+  content: '>';
+}
+
+.slick-next{
+  right: 4%;
+  top: auto;
+  bottom: -2%;
+}
+.slick-prev{
+  right: 15%;
+  left: auto;
+  top: auto;
+  bottom: -2%;
+}
+
+
+
+/* LATEST STYLES */
+
+.latest-styles{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 120px;
+}
+.section-title{
+  font-family: Montserrat;
+  color: $graniteGray;
+  letter-spacing: 1.2px;
+  font-size: 32px;
+  text-align: center;
+  margin-top: 100px;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-bottom: 2px solid $rozeQuartz;
+}
+.latest-styles-wrap{
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.latest-styles-item{
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  position: relative;
+
+  img{
+    width: 200px;
+  }
+}
+
+
+.img-wrapper{
+  width: 350px;
+  height: 250px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid $rozeQuartz;
+}
+
+.price-label{
+  display: block;
+  margin-top: 10px;
+  font-family: Montserrat;
+  color: $graniteGray;
+}
+
+.latest-styles-name{
+   color: $graniteGray;
+   margin-top: 15px;
+}
+
+
+
+/* BANNER2 */
+
+.banner2{
+  background: url(../../images/wedding_bg2.jpg) 50% 50% no-repeat;
+  background-size: cover;
+  height: 700px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+    .shop-btn{
+      margin-top: 50px;
+
+      &:hover{
+        color: #fff;
+      }
+    }
+
+    h4{
+      font-size: 50px;
+      font-family: Montserrat;
+      font-weight: 500;
+    }
+
+    p{
+      font-family: Montserrat;
+      font-size: 20px;
+    }
+}
+
+.banner2-wrapper{
+  width: 80%;
+  position: relative;z-index: 20;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.banner2-shadow{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.4);
+}
+
+.banner2-text-block{
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+
+/* FEEDBACK SECTION */
+
+.feedback{
+  margin: 50px 0px;
+
+  .slick-prev{
+    left: -25px;
+    opacity: 0;
+    top: 50%;
+    transition: .2s linear;
+  }
+
+  .slick-next{
+    right: -25px;
+    opacity: 0;
+    top: 50%;
+    transition: .2s linear;
+  }
+
+  &:hover{
+    .slick-prev{
+      opacity: 1;
+      left: 15px;
+      transition: .2s linear;
+    }
+  }
+
+  &:hover{
+    .slick-next{
+      opacity: 1;
+      right: 15px;
+      transition: .2s linear;
+    }
+  }
+}
+
+.feedback-slide{
+  display: flex !important;
+  flex-direction: column;
+  height: 350px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.feedback-slide-wrap{
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(240, 238, 233, 0.7 );
+  height: 200px;
+  position: relative;
+  width: 100%;
+
+    img{
+      width: 120px;
+      position: absolute;
+      top: -60px;
+      border-radius: 100px;
+    }
+
+    p{
+      color: $darkGray;
+      font-style: italic;
+      font-size: 18px ;
+    }
+
+    span{
+      color: $graniteGray;
+      font-size: 15px;
+    }
+
+}
+
+
+.feedback-slider{
+  width: 60%;
+  margin: 0 auto;
+}
+
+
+
+
+
+
+/* BANNER3 */
+
+.banner3{
+  width: 100%;
+  overflow: hidden;
+}
+.banner3-wrap{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.banner3-item img {
+  width: 100%;
+  height: 100%;
+}
+.banner3-item{
+  position: relative;
+  &:hover{
+    .info-shadow{
+      transition: .2s linear;
+      opacity: 1;
+      cursor: pointer;
+    }
+  }
+}
+
+
+.info-shadow{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .2s linear;
+  opacity: 0;
+  color: $darkGray;
+  font-size: 22px;
+  font-family: Montserrat;
+}
+
+
+
+
+/* CONTACT INFO */
+
+.contact-info{
+  display: flex;
+  justify-content: center;
+
+  border-bottom: 1px solid $rozeQuartz;
+}
+
+.contact-info-wrap{
+  width: 80%;
+  margin: 120px 0px 0px 0px;
+}
+
+.contact-info-block{
+  background: rgba(247,202,201, 0.3);
+  height: 200px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.contact-info-item{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  color: $darkGray;
+  height: 100px;
+  align-self: center;
+  border-right: 1px solid gray;
+
+  &:last-child{
+    border: none;
+  }
+
+  &:hover{
+    .info-icon-wrap{
+      background: #f8d4d3;
+      transition: .2s linear;
+    }
+  }
+
+  span{
+    font-size: 20px;
+    font-weight: 500;
+    color: $graniteGray;
+    margin-bottom: 20px;
+  }
+  a{
+    color: $graniteGray;
+    text-decoration: none;
+  }
+}
+
+.info-icon-wrap{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  background: rgba(247,202,201, 1);
+  position: absolute;
+  top: -100px;
+  transition: .2s linear;
+
+  img{
+    width: 35px;
+  }
+}
+
+

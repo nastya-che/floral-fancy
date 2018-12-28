@@ -1,0 +1,46 @@
+$rozeQuartz: #F7CAC9;
+$darkGray: #424443;
+
+nav{
+  height: 130px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 100;
+  width: 90%;
+  align-self: center;
+}
+
+.nav-left-side{
+  display: flex;
+}
+
+.main-menu{
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.main-menu-item{
+  height: 50px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: $darkGray;
+  text-transform: uppercase;
+  transition: .2s linear;
+  margin-right: -3px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.main-menu-item span{
+  padding: 0px 25px;
+  border-right: 3px solid $rozeQuartz;
+}
+
+.main-menu-item.active-item{
+  color: #fff;
+  background: $rozeQuartz;
+  transition: .2s linear;
+}

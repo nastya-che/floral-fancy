@@ -1,0 +1,198 @@
+$rozeQuartz: #F7CAC9;
+$graniteGray: #696667;
+
+body{
+  margin: 0px;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+}
+
+header{
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 20px -3px grey;
+  position: relative;
+  z-index: 10;
+
+  &.fixed{
+    position: fixed;
+    z-index: 50;
+    width: 100%;
+    background: #fff;
+    background: rgba(255,255,255,0.9);
+    .top-bar{
+      height: 0px;
+      border: none;
+      transition: .2s linear;
+      overflow: hidden;
+    }
+    .header-logo{
+      width: 0px;
+      img{
+        width: 0px;
+        transition: .2s linear;
+      }
+    }
+    nav{
+      height: 80px;
+    }
+  }
+}
+
+.top-bar{
+  height: 70px;
+  width: 60%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-bottom: 1px solid $rozeQuartz;
+  align-self: flex-end;
+  margin-right: 90px;
+  transition: .2s linear;
+}
+
+.header-logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 184px;
+
+  img{
+    width: 184px;
+    position: absolute;
+    bottom: 10px;
+    transition: .2s linear;
+  }
+}
+
+.header-soc{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.phone-icon{
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  background-size: cover;
+  background: url('../../images/001-phone.svg');
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before{
+  font-size: 20px;
+  color: #fff;
+  margin: 0px;
+
+}
+
+[class*=" flaticon-"]:hover:before, [class^="flaticon-"]:hover:before{
+  color: $rozeQuartz;
+  transition: .2s linear;
+}
+
+.contact-text{
+  color: $graniteGray;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.contact-tel{
+  color: $graniteGray;
+}
+
+.contact-icons{
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+}
+
+.header-contacts{
+  display: flex;
+  align-items: center;
+}
+
+.soc-icon{
+  width: 40px;
+  height: 40px;
+  background: $rozeQuartz;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  margin: 0px 10px;
+  border: 1px solid $rozeQuartz;
+  transition: .2s linear;
+  &:hover{
+    cursor: pointer;
+    background: transparent;
+  }
+}
+
+.header-social{
+  display: flex;
+  flex-direction: column;
+  .soc-icon{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    justify-content: flex-end;
+    &:hover{
+      cursor: pointer;
+    }
+    &:before{
+      margin-right: 10px !important;
+    }
+  }
+}
+
+.tel-block{
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+
+  a{
+    color: $graniteGray;
+    text-decoration: none;
+  }
+
+  img{
+    width: 20px;
+  }
+
+  span{
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+    background: $rozeQuartz;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 15px;
+  }
+}
+
+.info-block{
+  display: flex;
+  align-items: center;
+  span{
+    width: 40px;
+    height: 40px;
+    background: $rozeQuartz;
+    display: flex;
+    align-items: center;
+    border-radius: 40px;
+    justify-content: center;
+    margin: 0px 10px;
+
+    &:hover{
+      cursor: pointer;
+    }
+  }
+
+  .info-icon{
+    width: 20px;
+  }
+}

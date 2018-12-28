@@ -1,0 +1,145 @@
+$rozeQuartz: #F7CAC9;
+$graniteGray: #696667;
+$lightBeige: #F0EEE9;
+$darkGray: #424443;
+
+
+
+/* FOOTER STYLES */
+
+footer{
+
+  //position: fixed;
+  //width: 100%;
+  //bottom: 0px;
+  display: flex;
+  flex-direction: column;
+
+  .footer-up-line{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0px;
+    width: 90%;
+    align-self: center;
+  }
+
+  .footer-bottom-line{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0px;
+    background: #ffffff;
+    color: $graniteGray;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    background: rgba(155,155,155,0.15);
+    a{
+      transition: .2s linear;
+      color: $graniteGray;
+      &:hover{
+        text-decoration: underline;
+        transition: .2s linear;
+      }
+    }
+  }
+
+  .footer-info-block{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-logo-block{
+    img{
+      width: 180px;
+    }
+  }
+
+  .footer-menu-block{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-column-gap: 70px;
+    grid-row-gap: 10px;
+    a{
+      color: $graniteGray;
+      font-weight: 500;
+      font-family: 'Montserrat', sans-serif;
+      text-decoration: none;
+      transition: .2s linear;
+      &:hover{
+        color: $rozeQuartz;
+        transition: .2s linear;
+      }
+    }
+  }
+
+  .footer-tel{
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    ul{
+      padding-left: 20px;
+      li{
+        list-style: none;
+        margin: 7px 0px;
+        a{
+          color: $graniteGray;
+          font-weight: 500;
+          text-decoration: none;
+          transition: .2s linear;
+          &:hover{
+            color: $rozeQuartz;
+            transition: .2s linear;
+          }
+        }
+      }
+    }
+    span{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $rozeQuartz;
+      width: 40px;
+      height: 40px;
+      border-radius: 40px;
+      border: 1px solid $rozeQuartz;
+      img{
+        width: 20px;
+      }
+    }
+  }
+
+  .footer-email{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    color: $graniteGray;
+    font-weight: 500;
+    text-decoration: none;
+    transition: .2s linear;
+    &:hover{
+      color: $rozeQuartz;
+      transition: .2s linear;
+    }
+    span{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $rozeQuartz;
+      width: 40px;
+      height: 40px;
+      border-radius: 40px;
+      border: 1px solid $rozeQuartz;
+      margin-right: 20px;
+      img{
+        width: 20px;
+      }
+    }
+  }
+
+  .footer-soc-block{
+    display: flex;
+    margin: 20px 0px;
+  }
+}
+
